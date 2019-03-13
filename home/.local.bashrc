@@ -72,3 +72,6 @@ fi
 echo
 neofetch
 echo
+ansiweather -l edmonton -a false
+ansiweather -l edmonton -f 3 -a false
+echo
