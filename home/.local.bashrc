@@ -68,3 +68,7 @@ fi
 #     . /etc/bash_completion
 #   fi
 # fi
+
+echo
+neofetch
+echo
