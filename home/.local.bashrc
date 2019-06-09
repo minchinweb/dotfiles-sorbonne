@@ -72,6 +72,12 @@ fi
 echo
 neofetch
 echo
-ansiweather -l edmonton -a false
-ansiweather -l edmonton -f 3 -a false
+# https://askubuntu.com/a/358857
+if [[ "$(ping -c 1 google.com | grep '100% packet loss' )" != "" ]]; then
+    echo "No internet, skipping weather report."
+    exit 1
+else
+    ansiweather -l edmonton -a false
+    ansiweather -l edmonton -f 3 -a false
+fi
 echo
