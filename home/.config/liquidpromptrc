@@ -160,7 +160,9 @@ LP_ENABLE_SSH_COLORS=1
 
 # Specify a list of complete and colon (":") separated paths in which, all vcs
 # will be disabled
-LP_DISABLED_VCS_PATH="/mnt/ellesmereisland:/mnt/baffinisland"
+# Deprecated since version 2.0: Use LP_DISABLED_VCS_PATHS instead.
+#LP_DISABLED_VCS_PATH="/mnt/ellesmereisland:/mnt/baffinisland"
+LP_DISABLED_VCS_PATHS=("/mnt/ellesmereisland" "/mnt/baffinisland")
 
 LP_COLOR_PATH="$YELLOW"
 LP_COLOR_USER_LOGGED="$BLUE"
