@@ -72,12 +72,14 @@ fi
 echo
 neofetch
 echo
-# https://askubuntu.com/a/358857
-if [[ "$(ping -c 1 google.com | grep '100% packet loss' )" != "" ]]; then
-    echo "No internet, skipping weather report."
-    exit 1
-else
+
+# echo "...testing internet..."
+if [[ "$(timeout 0.2 ping -c1 8.8.8.8 | grep -q '1 received' )" == 0 ]]; then
     ansiweather -l edmonton -a false
     ansiweather -l edmonton -f 3 -a false
+else
+    echo "No internet, skipping weather report."
+    # exit 1
 fi
+
 echo
