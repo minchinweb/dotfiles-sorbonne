@@ -74,7 +74,8 @@ neofetch
 # echo
 
 # echo "...testing internet..."
-if [[ "$(timeout 0.2 ping -c1 8.8.8.8 | grep -q '1 received' )" == 0 ]]; then
+#if [[ "$(timeout 0.2 ping -c1 8.8.8.8 | grep -q '1 received' )" == 0 ]]; then
+if ping -q -w 1 -c 1 8.8.8.8 > /dev/null; then
     echo -n "Public IP: "
     curl ip4.ident.me
     echo
