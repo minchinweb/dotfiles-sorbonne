@@ -58,10 +58,18 @@ LP_ENABLE_FQDN=0
 # users)
 LP_USER_ALWAYS=1
 
-# Display the percentages of load/batteries along with their
-# corresponding marks. Set to 0 to only print the colored marks.
-# Defaults to 1 (display percentages)
-LP_PERCENTS_ALWAYS=1
+# Deprecated!
+# # Display the percentages of load/batteries along with their
+# # corresponding marks. Set to 0 to only print the colored marks.
+# # Defaults to 1 (display percentages)
+# LP_PERCENTS_ALWAYS=1
+
+# When displaying a value, show it as a percentage if possible.
+LP_DISPLAY_VALUES_AS_PERCENTS=1
+
+# Display the actual values of load, batteries, and wifi signal strength along
+# with their corresponding marks. Disable to only print the colored marks.
+LP_ALWAYS_DISPLAY_VALUES=1
 
 # Use the permissions feature and display a red ':' before the prompt to show
 # when you don't have write permission to the current directory.
@@ -158,10 +166,12 @@ LP_ENABLE_SCREEN_TITLE=0
 # Use different colors for the different hosts you SSH to
 LP_ENABLE_SSH_COLORS=1
 
-# Specify a list of complete and colon (":") separated paths in which, all vcs
+# Mark used to indicate that the prompt is ready for user input, unless some
+# other context overrides it, like a VCS repository.
+LP_MARK_DEFAULT="λ"
+
+# Specify a list of complete paths in which, all vcs
 # will be disabled
-# Deprecated since version 2.0: Use LP_DISABLED_VCS_PATHS instead.
-#LP_DISABLED_VCS_PATH="/mnt/ellesmereisland:/mnt/baffinisland"
 LP_DISABLED_VCS_PATHS=("/mnt/ellesmereisland" "/mnt/baffinisland")
 
 LP_COLOR_PATH="$YELLOW"
