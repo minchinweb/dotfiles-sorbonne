@@ -70,15 +70,16 @@ fi
 # fi
 
 echo
-neofetch
+#neofetch
+fastfetch
 # echo
 
 # echo "...testing internet..."
 #if [[ "$(timeout 0.2 ping -c1 8.8.8.8 | grep -q '1 received' )" == 0 ]]; then
 if [[ "ping -q -w 1 -c 1 ip4.ident.me > /dev/null" ]]; then
 #if 0; then
-    echo -n "Public IP: "
-    curl ip4.ident.me
+    # echo -n "Public IP: "
+    # curl ip4.ident.me
     echo
     ansiweather -l edmonton -a false
     ansiweather -l edmonton -f 3 -a false
